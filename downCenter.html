@@ -6,8 +6,31 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/idangerous.swiper.css">
+    <link rel="stylesheet" href="plugins/liMarquee/css/liMarquee.css">
 </head>
 <body>
+<div>
+    <ul class="box" style="width: 120px;height: 300px;">
+        <li>这是段落1</li>
+        <li>这是段落2</li>
+        <li>这是段落3</li>
+        <li>这是段落4</li>
+        <li>这是段落5</li>
+        <li>这是段落6</li>
+        <li>这是段落7</li>
+        <li>这是段落8</li>
+        <li>这是段落9</li>
+        <li>这是段落10</li>
+        <li>这是段落11</li>
+        <li>这是段落12</li>
+        <li>这是段落13</li>
+        <li>这是段落14</li>
+        <li>这是段落15</li>
+        <li>这是段落16</li>
+        <li>这是段落17</li>
+        <li>这是段落18</li>
+    </ul>
+</div>
 <div class="model-color-white ptb80">
     <div class="model-container wrapper">
         <ul class="slideUp-container">
@@ -143,11 +166,10 @@
         <p class="two-row movie-uptime mt20"><span class="color-gray">上映日期</span><span class="ml20">017-03-10(中国大陆) / 2016-02-16(柏林电影节) / 2016-07-27(英国)017-03-10(中国大陆) / 2016-02-16(柏林电影节) / 2016-07-27(英国)017-03-10(中国大陆) / 2016-02-16(柏林电影节) / 2016-07-27(英国)</span></p>
     </div>
 </div>
-
-
 <script src="plugins/jquery-1.10.1.min.js"></script>
 <script src="plugins/idangerous.swiper.min.js"></script>
 <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=k3qIdrXPHlw9rWIWk6HWSZ75h8Z8AEZU"></script>
+<script src="plugins/liMarquee/js/jquery.liMarquee.js"></script>
 <script>
     $(function(){
         var imageSwitch = new Swiper('.image-switch-container',{
@@ -229,6 +251,14 @@
             }
         },100);
     });
+    /*======================水平滚动=============================*/
+    $(function(){
+        $('.box').liMarquee({
+            direction: 'up',
+            runshort: false,
+            scrollamount: 15
+        });
+    })
 </script>
 </body>
 </html>
